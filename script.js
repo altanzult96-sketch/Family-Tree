@@ -1,48 +1,48 @@
 const people = {
     paternalGrandfather: {
-        name: "Нэрийг оруулна",
+        name: "Лувсанбалдан",
         relation: "Аавын аав",
         photo: "images/paternal-grandfather.jpg",
         bio: "Аавын аавын намтрыг энд бичнэ."
     },
 
     paternalGrandmother: {
-        name: "Нэрийг оруулна",
+        name: "Энхтуяа",
         relation: "Аавын ээж",
         photo: "images/paternal-grandmother.jpg",
         bio: "Аавын ээжийн намтрыг энд бичнэ."
     },
 
     maternalGrandfather: {
-        name: "Нэрийг оруулна",
+        name: "Нямаа",
         relation: "Ээжийн аав",
         photo: "images/maternal-grandfather.jpg",
         bio: "Ээжийн аавын намтрыг энд бичнэ."
     },
 
     maternalGrandmother: {
-        name: "Нэрийг оруулна",
+        name: "Тэрбиш",
         relation: "Ээжийн ээж",
         photo: "images/maternal-grandmother.jpg",
         bio: "Ээжийн ээжийн намтрыг энд бичнэ."
     },
 
     father: {
-        name: "Нэрийг оруулна",
+        name: "Тогтуунбаяр",
         relation: "Аав",
         photo: "images/father.jpg",
         bio: "Аавын намтрыг энд бичнэ."
     },
 
     mother: {
-        name: "Нэрийг оруулна",
+        name: "Цэцэг-Өлзий",
         relation: "Ээж",
         photo: "images/mother.jpg",
         bio: "Ээжийн намтрыг энд бичнэ."
     },
 
     me: {
-        name: "Нэрийг оруулна",
+        name: "Алтанзул",
         relation: "Би",
         photo: "images/me.jpg",
         bio: "Өөрийн танилцуулгыг энд бичнэ."

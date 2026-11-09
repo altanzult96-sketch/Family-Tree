@@ -1,0 +1,541 @@
+:root {
+    --green: #103e30;
+    --cream: #f7f6ec;
+    --gold: #d7bb76;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--green);
+    font-family: Arial, sans-serif;
+}
+
+/* Дээд цэс */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(115deg, #0b392e, #165442);
+    color: white;
+}
+
+.main-menu {
+    max-width: 1180px;
+    min-height: 70px;
+    margin: auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-name {
+    font: 700 30px Georgia, serif;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-links {
+    display: flex;
+    gap: 36px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menu-links a:hover {
+    color: var(--gold);
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Нүүр болон удмын модны дэвсгэр */
+
+.home-section,
+.tree-section {
+    background:
+        radial-gradient(
+            ellipse at 7% 10%,
+            #e5ecd9 0%,
+            transparent 29%
+        ),
+        radial-gradient(
+            ellipse at 93% 70%,
+            #e9eedf 0%,
+            transparent 32%
+        ),
+        #fbf9ef;
+}
+
+/* Нүүр хэсэг */
+
+.home-section {
+    min-height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+    padding: 45px max(5%, calc((100vw - 1250px) / 2));
+    overflow: hidden;
+}
+
+.home-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.home-content h1 {
+    font: 700 clamp(68px, 8vw, 130px)/0.99 Georgia, serif;
+    margin: 0;
+    letter-spacing: -3px;
+}
+
+.flower-divider,
+.tree-divider {
+    color: #66845d;
+    font-size: 32px;
+    margin: 18px auto 25px;
+}
+
+.flower-divider::before,
+.flower-divider::after,
+.tree-divider::before,
+.tree-divider::after {
+    content: "";
+    display: inline-block;
+    width: 70px;
+    border-top: 1px solid #bca46c;
+    vertical-align: middle;
+    margin: 0 16px;
+}
+
+.primary-button {
+    display: inline-block;
+    background: #0d4937;
+    border-radius: 40px;
+    color: white;
+    padding: 17px 37px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primary-button:hover {
+    background: #1c6249;
+}
+
+/* Нүүр хэсгийн дөрвөн дугуй зураг */
+
+.photo-collage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.15;
+    max-height: 670px;
+}
+
+.collage-photo {
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 8px 28px #16402a25;
+    background: #e1e7d9;
+}
+
+.collage-one {
+    width: 38%;
+    aspect-ratio: 1;
+    left: 24%;
+    top: 3%;
+}
+
+.collage-two {
+    width: 35%;
+    aspect-ratio: 1;
+    right: 0;
+    top: 13%;
+}
+
+.collage-three {
+    width: 55%;
+    aspect-ratio: 1;
+    left: 20%;
+    top: 30%;
+    z-index: 2;
+}
+
+.collage-four {
+    width: 28%;
+    aspect-ratio: 1;
+    right: 3%;
+    bottom: 3%;
+    z-index: 3;
+}
+
+.collage-leaf {
+    position: absolute;
+    color: #7b9869;
+    font: 230px Georgia, serif;
+    opacity: 0.52;
+    transform: rotate(-24deg);
+}
+
+.leaf-one {
+    top: -7%;
+    left: 3%;
+}
+
+.leaf-two {
+    right: -4%;
+    top: 27%;
+    transform: rotate(55deg);
+}
+
+.leaf-three {
+    left: 5%;
+    bottom: -8%;
+    transform: rotate(15deg);
+}
+
+/* Удмын мод */
+
+.tree-section {
+    position: relative;
+    min-height: 0;
+    padding: 25px 20px 35px;
+    text-align: center;
+}
+
+.tree-section h2 {
+    font: 700 clamp(32px, 4.5vw, 62px) Georgia, serif;
+    margin: 0;
+}
+
+.tree-divider {
+    margin: 5px auto 5px;
+}
+
+/* Модны үндсэн хэмжээ */
+
+.tree-art {
+    position: relative;
+    width: min(1350px, 100%);
+    aspect-ratio: 1100 / 670;
+    margin: 0 auto;
+}
+
+.tree-background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Гэр бүлийн гишүүд */
+
+.person {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 13%;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: var(--green);
+    z-index: 2;
+}
+
+.person img {
+    display: block;
+    width: 86%;
+    aspect-ratio: 1;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ead8a5;
+    box-shadow: 0 0 0 3px #fff8e7;
+    background: #e3e9dc;
+    transition: transform 0.2s;
+}
+
+.person:hover img {
+    transform: scale(1.07);
+}
+
+.person span {
+    display: block;
+    width: 100%;
+    margin-top: -2px;
+    padding: 9px 2px;
+    border: 1px solid #e6d29c;
+    border-radius: 30px;
+    background: #fff9e9;
+    box-shadow: 0 3px 8px #1e3c2b15;
+    font-size: clamp(10px, 1.1vw, 15px);
+    font-weight: 700;
+}
+
+/* Хүмүүсийн байрлал */
+
+.paternal-grandfather {
+    left: 21%;
+    top: 23%;
+}
+
+.paternal-grandmother {
+    left: 38%;
+    top: 23%;
+}
+
+.maternal-grandfather {
+    left: 63%;
+    top: 23%;
+}
+
+.maternal-grandmother {
+    left: 80%;
+    top: 23%;
+}
+
+.father {
+    left: 35%;
+    top: 55%;
+}
+
+.mother {
+    left: 66%;
+    top: 55%;
+}
+
+.me {
+    left: 50%;
+    top: 83%;
+}
+
+/* Зураг дээр дарах заавар */
+
+.tree-hint {
+    position: absolute;
+    right: 2%;
+    top: 68%;
+    max-width: 220px;
+    margin: 0;
+    padding: 14px 18px;
+    border-radius: 30px;
+    background: #f3f0e3;
+    color: #607d6b;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(110deg, #103d30, #165340);
+    color: white;
+    text-align: center;
+    padding: 22px 10px;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Намтар харуулах цонх */
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: #081b15aa;
+}
+
+.modal-card {
+    position: relative;
+    width: min(460px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    background: #fffaf0;
+    box-shadow: 0 15px 60px #0005;
+}
+
+.modal-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #dfc98b;
+}
+
+.modal-card h2 {
+    font: 700 28px Georgia, serif;
+    margin: 18px 0 5px;
+}
+
+.modal-relation {
+    color: #72836e;
+    font-weight: 700;
+}
+
+#modal-bio {
+    text-align: left;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    border: 0;
+    background: transparent;
+    font-size: 32px;
+    color: var(--green);
+    cursor: pointer;
+}
+
+/* Гар утасны дэлгэц */
+
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 62px;
+    }
+
+    .main-menu {
+        min-height: 62px;
+    }
+
+    .site-name {
+        font-size: 24px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        right: 0;
+        background: #103e30;
+        padding: 18px 24px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-links.open {
+        display: flex;
+    }
+
+    .home-section {
+        min-height: calc(100vh - 62px);
+        grid-template-columns: 1fr;
+        padding: 55px 20px 30px;
+    }
+
+    .home-content h1 {
+        font-size: clamp(55px, 13vw, 72px);
+    }
+
+    .photo-collage {
+        margin-top: 35px;
+    }
+
+    .collage-leaf {
+        font-size: 130px;
+    }
+
+    .tree-section {
+        min-height: 0;
+        padding: 25px 5px 35px;
+    }
+
+    .tree-section h2 {
+        font-size: clamp(27px, 7vw, 40px);
+    }
+
+    .tree-art {
+        width: 100%;
+        aspect-ratio: 1100 / 670;
+    }
+
+    .person {
+        width: 16%;
+    }
+
+    .person img {
+        border-width: 2px;
+        box-shadow: 0 0 0 1px #fff8e7;
+    }
+
+    .person span {
+        font-size: clamp(7px, 1.6vw, 11px);
+        padding: 5px 0;
+    }
+
+    .paternal-grandfather {
+        left: 18%;
+    }
+
+    .paternal-grandmother {
+        left: 39%;
+    }
+
+    .maternal-grandfather {
+        left: 62%;
+    }
+
+    .maternal-grandmother {
+        left: 83%;
+    }
+
+    .tree-hint {
+        position: static;
+        max-width: 260px;
+        margin: 15px auto 0;
+        padding: 10px 14px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 18px 10px;
+        font-size: 11px;
+    }
+}

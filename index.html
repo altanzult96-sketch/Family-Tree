@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="mn">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Family Tree</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header class="main-header">
+            <nav class="main-menu">
+                <a class="site-name" href="#home">Family Tree</a>
+                <button class="menu-button" type="button">☰</button>
+                <div class="menu-links">
+                    <a href="#home">Нүүр</a>
+                    <a href="#family-tree">Удмын мод</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="home-section">
+                <div class="home-content">
+                    <h1>Бидний<br>түүх</h1>
+                    <div class="flower-divider">❧</div>
+                    <a class="primary-button" href="#family-tree">
+                        Удмын мод үзэх ↓
+                    </a>
+                </div>
+
+                <div class="photo-collage">
+                    <span class="collage-leaf leaf-one">❧</span>
+                    <span class="collage-leaf leaf-two">❧</span>
+                    <span class="collage-leaf leaf-three">❧</span>
+
+                    <img class="collage-photo collage-one"
+                         src="images/family-1.jpg" alt="Гэр бүлийн зураг 1">
+                    <img class="collage-photo collage-two"
+                         src="images/family-2.jpg" alt="Гэр бүлийн зураг 2">
+                    <img class="collage-photo collage-three"
+                         src="images/family-3.jpg" alt="Гэр бүлийн зураг 3">
+                    <img class="collage-photo collage-four"
+                         src="images/family-4.jpg" alt="Гэр бүлийн зураг 4">
+                </div>
+            </section>
+
+            <section id="family-tree" class="tree-section">
+                <h2>Манай гэр бүлийн мод</h2>
+                <div class="tree-divider">❧</div>
+
+                <div class="tree-art">
+                    <img class="tree-background"
+                         src="images/tree.svg"
+                         alt="Навч мөчиртэй удмын мод">
+
+                    <button class="person paternal-grandfather"
+                            data-person="paternalGrandfather">
+                        <img src="images/paternal-grandfather.jpg" alt="Аавын аав">
+                        <span>Аавын аав</span>
+                    </button>
+
+                    <button class="person paternal-grandmother"
+                            data-person="paternalGrandmother">
+                        <img src="images/paternal-grandmother.jpg" alt="Аавын ээж">
+                        <span>Аавын ээж</span>
+                    </button>
+
+                    <button class="person maternal-grandfather"
+                            data-person="maternalGrandfather">
+                        <img src="images/maternal-grandfather.jpg" alt="Ээжийн аав">
+                        <span>Ээжийн аав</span>
+                    </button>
+
+                    <button class="person maternal-grandmother"
+                            data-person="maternalGrandmother">
+                        <img src="images/maternal-grandmother.jpg" alt="Ээжийн ээж">
+                        <span>Ээжийн ээж</span>
+                    </button>
+
+                    <button class="person father" data-person="father">
+                        <img src="images/father.jpg" alt="Аав">
+                        <span>Аав</span>
+                    </button>
+
+                    <button class="person mother" data-person="mother">
+                        <img src="images/mother.jpg" alt="Ээж">
+                        <span>Ээж</span>
+                    </button>
+
+                    <button class="person me" data-person="me">
+                        <img src="images/me.jpg" alt="Би">
+                        <span>Би</span>
+                    </button>
+                </div>
+
+                <p class="tree-hint">
+                    Гэр бүлийн гишүүний зураг дээр дарж түүхийг уншина уу.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Миний гэр бүлийн 3 үеийн түүх</p>
+        </footer>
+
+        <div class="modal" id="person-modal" hidden>
+            <div class="modal-card" role="dialog" aria-modal="true"
+                 aria-labelledby="modal-name">
+                <button class="close-button" type="button">×</button>
+                <img id="modal-photo" src="images/me.jpg"
+                     alt="Гэр бүлийн гишүүний зураг">
+                <h2 id="modal-name"></h2>
+                <p id="modal-relation" class="modal-relation"></p>
+                <p id="modal-bio"></p>
+            </div>
+        </div>
+    </body>
+</html>

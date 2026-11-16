@@ -396,10 +396,10 @@ footer p {
 }
 
 #info-biography {
-    text-align: left;
+    text-align: justify;
     font-size: 16px;
     line-height: 1.8;
-    white-space: pre-line;
+    white-space: normal;
 }
 
 .close-info-btn {

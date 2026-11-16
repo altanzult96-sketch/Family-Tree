@@ -283,8 +283,23 @@ body {
     top: 56%;
 }
 
+.older-sister {
+    left: 29%;
+    top: 83%;
+}
+
+.younger-sister {
+    left: 43%;
+    top: 83%;
+}
+
+.brother {
+    left: 57%;
+    top: 83%;
+}
+
 .me {
-    left: 50%;
+    left: 71%;
     top: 83%;
 }
 
@@ -531,5 +546,28 @@ footer p {
     .info-box img {
         width: 150px;
         height: 150px;
+    }
+
+
+    /* Ах, эгч нар болон миний байрлал */
+
+    .older-sister {
+        left: 17%;
+        top: 83%;
+    }
+
+    .younger-sister {
+        left: 39%;
+        top: 83%;
+    }
+
+    .brother {
+        left: 61%;
+        top: 83%;
+    }
+
+    .me {
+        left: 83%;
+        top: 83%;
     }
 }

@@ -41,6 +41,27 @@ const people = {
         bio: "Ээжийн намтрыг энд бичнэ."
     },
 
+    olderSister: {
+        name: "Том эгчийн нэр",
+        relation: "Том эгч",
+        photo: "images/older-sister.jpg",
+        bio: "Том эгчийн намтрыг энд бичнэ."
+    },
+
+    youngerSister: {
+        name: "Дараагийн эгчийн нэр",
+        relation: "Дараагийн эгч",
+        photo: "images/younger-sister.jpg",
+        bio: "Дараагийн эгчийн намтрыг энд бичнэ."
+    },
+
+    brother: {
+        name: "Ахын нэр",
+        relation: "Ах",
+        photo: "images/brother.jpg",
+        bio: "Ахын намтрыг энд бичнэ."
+    },
+
     me: {
         name: "Алтанзул",
         relation: "Би",

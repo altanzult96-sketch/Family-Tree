@@ -2,6 +2,7 @@
     --green: #103e30;
     --cream: #f7f6ec;
     --gold: #d7bb76;
+    --tree-h: calc(100dvh - 136px);
 }
 
 * {
@@ -197,6 +198,30 @@ body {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+
+    /* Том эгч болон түүний хүүгийн байрлал (зураасыг ч эндээс тооцно) */
+    --sis-x: 29%;
+    --row-y: 67%;
+    --sis-y: var(--row-y);
+    --nephew-y: 90%;
+}
+
+/* Том эгчээс түүний хүү рүү татсан холбох зураас.
+   Гишүүдийн зургийн ард (z-index: 1) байгаа тул зөвхөн
+   хоёрын хоорондох хэсэг нь харагдана. */
+
+.tree-content::after {
+    content: "";
+    position: absolute;
+    left: var(--sis-x);
+    top: var(--sis-y);
+    height: calc(var(--nephew-y) - var(--sis-y));
+    width: 4px;
+    transform: translateX(-50%);
+    background: #c9a85c;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #fff8e7;
+    z-index: 1;
 }
 
 .tree-background {
@@ -211,7 +236,8 @@ body {
 .member {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 10%;
+    /* Бүх гишүүн ижил хэмжээтэй. Намхан дэлгэц дээр өндрөөс нь хамаарч багасна */
+    width: min(9%, calc((var(--tree-h) * 0.175 - 30px) / 0.86));
     min-width: 0;
     padding: 0;
     background: transparent;
@@ -255,52 +281,59 @@ body {
 
 .paternal-grandpa {
     left: 28%;
-    top: 28%;
+    top: 21%;
 }
 
 .paternal-grandma {
     left: 41%;
-    top: 28%;
+    top: 21%;
 }
 
 .maternal-grandpa {
     left: 60%;
-    top: 28%;
+    top: 21%;
 }
 
 .maternal-grandma {
     left: 73%;
-    top: 28%;
+    top: 21%;
 }
 
 .father {
-    left: 39%;
-    top: 56%;
+    left: 38%;
+    top: 44%;
 }
 
 .mother {
-    left: 61%;
-    top: 56%;
+    left: 62%;
+    top: 44%;
 }
 
 .older-sister {
-    left: 29%;
-    top: 83%;
+    left: var(--sis-x);
+    top: var(--row-y);
 }
 
 .younger-sister {
     left: 43%;
-    top: 83%;
+    top: var(--row-y);
 }
 
 .brother {
     left: 57%;
-    top: 83%;
+    top: var(--row-y);
 }
 
 .me {
     left: 71%;
-    top: 83%;
+    top: var(--row-y);
+}
+
+/* Том эгчийн хүү: том эгчийн яг доор, бусадтай ижил хэмжээтэй */
+
+.nephew {
+    left: var(--sis-x);
+    top: var(--nephew-y);
 }
 
 /* Зураг дээр дарах заавар */
@@ -482,7 +515,10 @@ footer p {
         position: relative;
         width: 100%;
         height: auto;
-        aspect-ratio: 3 / 2;
+        /* Хүү нэмэгдсэн тул мод арай өндөр болсон */
+        aspect-ratio: 3 / 3.4;
+
+        --sis-x: 17%;
     }
 
     .tree-background {
@@ -549,25 +585,21 @@ footer p {
     }
 
 
-    /* Ах, эгч нар болон миний байрлал */
+    /* Ах, эгч нар болон миний байрлал (босоо байрлал --row-y-ээс) */
 
     .older-sister {
         left: 17%;
-        top: 83%;
     }
 
     .younger-sister {
         left: 39%;
-        top: 83%;
     }
 
     .brother {
         left: 61%;
-        top: 83%;
     }
 
     .me {
         left: 83%;
-        top: 83%;
     }
 }
